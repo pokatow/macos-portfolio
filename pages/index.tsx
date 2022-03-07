@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const [auth, setAuth] = useState(false)
   const [loginError, setLoginError] = useState('')
   const loginHandler = (date: String) => {
-    if (date === '2000-04-18') {
+    if (date === '18042000') {
       setAuth(true)
     } else {
       setLoginError('Masa lupa kapan tanngal lahir 😒')
@@ -27,9 +27,11 @@ const Home: NextPage = () => {
       {/* {!auth && <Notification />} */}
 
       <main className="flex flex-col items-center justify-center flex-1 w-full px-10 py-20 text-center">
-        <h1 className="mb-8 text-2xl font-bold">
-          Dear Elaina - A Letter to You
-        </h1>
+        {!auth && (
+          <h1 className="mb-8 text-2xl font-bold">
+            Dear Elaina - A Letter to You
+          </h1>
+        )}
         {!auth && <Login login={loginHandler} error={loginError} />}
         {auth && <Letter />}
       </main>

@@ -18,12 +18,12 @@ const Login = (props: LoginProps) => {
     >
       <div className="flex flex-col gap-2 text-left w-80">
         <label htmlFor="birthdate" className="font-semibold">
-          Your Birthdate
+          Password
         </label>
         <input
-          type="date"
+          type="password"
           ref={birthDate}
-          className="p-2 border border-black bg-gray-50"
+          className="w-full p-2 border border-black bg-gray-50"
         />
         {props.error && <p className="text-red-400">{props.error}</p>}
       </div>
