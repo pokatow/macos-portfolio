@@ -36,7 +36,7 @@ const Home: NextPage = () => {
         {auth && <Letter />}
       </main>
 
-      <MusicPlayer />
+      {auth && <MusicPlayer />}
     </div>
   )
 }
