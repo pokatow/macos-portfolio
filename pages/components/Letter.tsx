@@ -3,7 +3,7 @@ import React from 'react'
 const Letter = () => {
   return (
     <div className="flex flex-col max-w-2xl gap-4 text-left">
-      <h1 className="mb-4 text-2xl font-bold">Dear Elaina,</h1>
+      <h1 className="mb-4 text-xl font-semibold">Dear Elaina,</h1>
       <p className="pb-10">
         Hello 👋, kukira wo bakal ceritain wo de journey suka sama ni langsung
         pas kita lagi hangout bareng. Too bad belum sempat dan sepertinya dah
@@ -148,7 +148,7 @@ const Letter = () => {
         </tbody>
       </table>
 
-      <p className="text-center">
+      <p className="text-xl">
         Peace out ✌️, <br />
         <span className="font-semibold">Sherwin Variancia</span>
       </p>
