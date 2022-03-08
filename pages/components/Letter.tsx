@@ -128,20 +128,20 @@ const Letter = () => {
                 langsung kek jleb gitu. But mau gimana pun relationship works in
                 both directions, so kalau emang satu bener” udah cannot lanjut
                 ya mending stop aja. Don’t get me wrong, aku ga nyesal
-                interested and suka sama ni kok, cuma ya sedih aja. It’s
-                definitely a lie kalau wo bilang wo ga sedih sama sekali .
+                interested and suka sama ni kok, senang and sedih campur aduk.
+                It’s definitely a lie kalau wo bilang wo ga sedih sama sekali.
                 Sepertinya udah saatnya untuk clear chat history dkk lagi.
               </p>
               <p className="pb-6">
-                Selama dua bulan++ ini wo juga berusaha menjadi pribadi yg lebih
+                Selama dua bulan+ ini wo juga berusaha menjadi pribadi yg lebih
                 baik, which is good thing and I’ll definitely keep working on
                 it. Semoga ni bisa move on dari ni de ex (wo juga pasti bakal
                 berusaha untuk move on jugak) and ketemu sama yang cocok sama ni
                 nanti di waktu yang tepat. Definitely takes time, but enjoy aja
-                processnya. Semoga ni de skripsi juga lancar” juga and jangan
-                suka pegi" sendirian apa lagi ga ngabarin siapa" tar diculik om"
-                baru tau. Don't feel bad yak, everything seems completely normal
-                to me. Anyway thank you for everything!
+                processnya. Semoga ni de skripsi juga lancar” and jangan suka
+                pergi" sendirian yak, apa lagi ga ngabarin siapa" tar diculik
+                om" baru tau. Don't feel bad yak, everything seems completely
+                normal to me. Anyway thank you for everything!
               </p>
             </td>
           </tr>
