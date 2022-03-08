@@ -138,10 +138,10 @@ const Letter = () => {
                 it. Semoga ni bisa move on dari ni de ex (wo juga pasti bakal
                 berusaha untuk move on jugak) and ketemu sama yang cocok sama ni
                 nanti di waktu yang tepat. Definitely takes time, but enjoy aja
-                processnya. Semoga ni de skripsi juga lancar” and jangan suka
+                processnya. Semoga ni de skripsi juga lancar and jangan suka
                 pergi" sendirian yak, apa lagi ga ngabarin siapa" tar diculik
-                om" baru tau. Don't feel bad yak, everything seems completely
-                normal to me. Anyway thank you for everything!
+                om" baru tau. Lastly don't feel bad yak, everything seems
+                completely normal to me. Thank you for everything!
               </p>
             </td>
           </tr>
