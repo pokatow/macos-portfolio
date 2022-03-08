@@ -148,7 +148,7 @@ const Letter = () => {
         </tbody>
       </table>
 
-      <p className="text-xl">
+      <p className="text-xl text-center">
         Peace out ✌️, <br />
         <span className="font-semibold">Sherwin Variancia</span>
       </p>

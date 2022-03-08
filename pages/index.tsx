@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     if (date === '18042000') {
       setAuth(true)
     } else {
-      setLoginError('Masa lupa kapan tanngal lahir 😒')
+      setLoginError('Masa lupa tanngal lahir diri sendiri 😒')
     }
   }
   return (
