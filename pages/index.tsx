@@ -28,9 +28,13 @@ const Home: NextPage = () => {
 
       <main className="flex flex-col items-center justify-center flex-1 w-full px-10 py-20 text-center">
         {!auth && (
-          <h1 className="mb-8 text-2xl font-bold">
-            Dear Elaina - A Letter to You
-          </h1>
+          <>
+            <h1 className="mb-2 text-2xl font-bold">
+              Dear Elaina - A Letter to You
+            </h1>
+
+            <span className="mb-8 text-xs">Last Updated: 03/08/2022</span>
+          </>
         )}
         {!auth && <Login login={loginHandler} error={loginError} />}
         {auth && <Letter />}
