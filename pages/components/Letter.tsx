@@ -3,7 +3,10 @@ import React from 'react'
 const Letter = () => {
   return (
     <div className="flex flex-col max-w-2xl gap-4 text-left">
-      <h1 className="mb-4 text-xl font-semibold">Dear Elaina,</h1>
+      <div className="mb-4">
+        <span className="mb-2 text-xs">Last Updated: 03/08/2022</span>
+        <h1 className="text-xl font-semibold ">Dear Elaina,</h1>
+      </div>
       <p className="pb-10">
         Hello 👋, kukira wo bakal ceritain wo de journey suka sama ni langsung
         pas kita lagi hangout bareng. Too bad belum sempat dan sepertinya dah
