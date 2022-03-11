@@ -4,7 +4,7 @@ const Letter = () => {
   return (
     <div className="flex flex-col max-w-2xl gap-4 text-left">
       <div className="mb-4">
-        <span className="mb-2 text-xs">Last Updated: 03/08/2022</span>
+        <span className="mb-2 text-xs">Last Updated: 12/03/2022</span>
         <h1 className="text-xl font-semibold ">Dear Elaina,</h1>
       </div>
       <p className="pb-10">
@@ -135,7 +135,7 @@ const Letter = () => {
                 It’s definitely a lie kalau wo bilang wo ga sedih sama sekali.
                 Sepertinya udah saatnya untuk clear chat history dkk lagi.
               </p>
-              <p className="pb-6">
+              <p className="mb-4">
                 Selama dua bulan+ ini wo juga berusaha menjadi pribadi yg lebih
                 baik, which is good thing and I’ll definitely keep working on
                 it. Semoga ni bisa move on dari ni de ex (wo juga pasti bakal
@@ -145,6 +145,17 @@ const Letter = () => {
                 pergi" sendirian yak, apa lagi ga ngabarin siapa" tar diculik
                 om" baru tau. Lastly don't feel bad yak, everything seems
                 completely normal to me. Thank you for everything!
+              </p>
+              <h2 className="text-sm font-semibold">11 Mar</h2>
+              <p className="mb-6">
+                Dah lima hari sejak kita ga chat. Susah yak move on, orang" pda
+                blg udah move on aja. Ngomong si gampang ya, tapi susah
+                eksekusinya. Rasanya aneh aja klo ga chat ni apa lagi pas malam,
+                coz kek udah biasa gtu. Pas mo tidur tuh selalu kepikiran ni
+                terus. Btw, wo nonton more than blue (series netflix) kmrn,
+                ceritanya pengen ngeluarin semua gitu, recommended. Terus tudei
+                demot parah, ditambah lagi tadi quarrel sama wo de pa kzl pol.
+                Jiah malah jadi curhat. Intinya gitu deh, susah.
               </p>
             </td>
           </tr>
