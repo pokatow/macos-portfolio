@@ -154,8 +154,7 @@ const Letter = () => {
                 coz kek udah biasa gtu. Pas mo tidur tuh selalu kepikiran ni
                 terus. Btw, wo nonton more than blue (series netflix) kmrn,
                 ceritanya pengen ngeluarin semua gitu, recommended. Terus tudei
-                demot parah, ditambah lagi tadi quarrel sama wo de pa kzl pol.
-                Jiah malah jadi curhat. Intinya gitu deh, susah.
+                demot parah, jiah malah jadi curhat.
               </p>
             </td>
           </tr>
