@@ -6,6 +6,7 @@ const Layout: React.FunctionComponent = ({ children }) => {
   return (
     <>
       <Head>
+        <link rel="icon" href="/favicon/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
@@ -96,10 +97,7 @@ const Layout: React.FunctionComponent = ({ children }) => {
         <meta property="og:url" content="" />
         <meta property="og:site_name" content="boilerplate" />
         <meta name="twitter:card" content="summary" />
-        <meta
-          name="twitter:description"
-          content="We are a creative agency specializing in design and web development based in Indonesia."
-        />
+        <meta name="twitter:description" content="boilerolate" />
         <meta name="twitter:title" content="boilerplate" />
         <meta name="twitter:site" content="" />
         <meta name="twitter:creator" content="" />
