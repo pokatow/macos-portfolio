@@ -6,8 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        calligraphy: ['Grape Nuts', 'cursive'],
-        'alfa-slab': ['Alfa Slab One', 'cursive'],
+        nunito: ['Nunito', 'sans-serif'],
       },
       colors: {
         background: '#f2eedef8',
