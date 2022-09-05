@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Dock from './Dock'
 import Footer from './Footer'
 import Navbar from './Navbar'
 
@@ -105,7 +106,8 @@ const Layout: React.FunctionComponent = ({ children }) => {
       <div className="flex flex-col justify-between min-h-screen select-none">
         <Navbar />
         {children}
-        <Footer />
+        <Dock />
+        {/* <Footer /> */}
       </div>
     </>
   )
