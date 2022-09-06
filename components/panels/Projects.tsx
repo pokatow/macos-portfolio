@@ -29,7 +29,7 @@ const Projects: React.FunctionComponent<{ projects: IProject[] }> = ({
       content: <Project data={selectedProject!} />,
       icon: '/images/icons/doc.png',
       minimize: false,
-      extraClass: 'w-3/5',
+      extraClass: 'w-2/5',
     }
 
     updatePanel([...activePanel, newPanel!])
