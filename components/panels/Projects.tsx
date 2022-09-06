@@ -39,7 +39,7 @@ const Projects: React.FunctionComponent<{ projects: IProject[] }> = ({
       {projects.map((project, index) => {
         return (
           <div
-            className="flex flex-col w-1/6 p-1 space-y-1 rounded cursor-pointer hover:bg-blue-200"
+            className="flex flex-col w-24 p-1 space-y-1 rounded cursor-pointer hover:bg-blue-200"
             key={project.id}
             onClick={(e) => {
               if (e.detail == 2) {
