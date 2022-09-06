@@ -111,7 +111,7 @@ const Layout: React.FunctionComponent = ({ children }) => {
       </div>
       <div
         className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-cover md:hidden"
-        style={{ backgroundImage: `url("/images/wallpaper/1.jpg")` }}
+        style={{ backgroundImage: `url("/images/wallpaper/2.jpg")` }}
       >
         <span className="px-3 py-2 text-lg font-semibold text-white shadow-lg rounded-xl bg-white/25 backdrop-blur-3xl">
           Please Use Desktop

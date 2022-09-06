@@ -46,8 +46,8 @@ const Project: React.FunctionComponent<{ data: IProject }> = ({ data }) => {
   }
 
   return (
-    <div className="flex flex-col p-4 text-neutral-800">
-      <div className="flex items-center space-x-2">
+    <div className="flex flex-col p-4 overflow-y-auto text-neutral-800">
+      <div className="flex items-center pt-6 space-x-2">
         <h1 className="text-xl font-bold">{data.name}</h1>
         {data.website_url && (
           <a href={data.website_url} target={'_blank'}>

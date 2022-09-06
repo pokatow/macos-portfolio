@@ -148,7 +148,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>MacOS</title>
+        <title>Pokatow</title>
       </Head>
       <main
         style={{ backgroundImage: `url("/images/wallpaper/1.jpg")` }}
