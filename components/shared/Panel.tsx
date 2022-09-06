@@ -43,16 +43,19 @@ const Panel: React.FunctionComponent<{
                   <div
                     className="w-3 h-3 bg-red-400 rounded-full cursor-pointer"
                     onClick={close}
+                    onTouchStart={close}
                     title="Exit"
                   ></div>
                   <div
                     className="w-3 h-3 bg-yellow-400 rounded-full cursor-pointer "
                     onClick={minimize}
+                    onTouchStart={minimize}
                     title="Minimize"
                   ></div>
                   <div
                     className="w-3 h-3 bg-green-400 rounded-full cursor-pointer"
                     onClick={minimize}
+                    onTouchStart={minimize}
                     title="Minimize too xD"
                   ></div>
                 </div>
