@@ -155,7 +155,7 @@ const Home: NextPage = () => {
         className="relative min-h-screen overflow-hidden bg-cover"
       >
         <div className="absolute inset-0 pt-10" id="panel">
-          <div className="flex flex-col flex-wrap items-start space-y-4">
+          <div className="flex flex-col flex-wrap items-start p-1 space-y-4">
             {DESKTOP.map((app) => {
               return (
                 <div
