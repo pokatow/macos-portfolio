@@ -160,7 +160,7 @@ const Home: NextPage = () => {
               return (
                 <div
                   key={app.panel_id}
-                  className="flex flex-col items-center justify-center px-3 py-1 rounded cursor-pointer hover:bg-blue-300"
+                  className="flex flex-col items-center justify-center w-24 px-3 py-1 rounded cursor-pointer hover:bg-blue-300"
                   onClick={(e) => {
                     if (e.detail == 2) {
                       openPanel(app.panel_id)

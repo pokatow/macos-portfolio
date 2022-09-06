@@ -38,7 +38,7 @@ const Panel: React.FunctionComponent<{
             className={`absolute top-1/4 left-1/3 z-40 mx-auto flex -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-xl shadow-xl ${extraClass}`}
           >
             <span className="">
-              <div className="flex items-center justify-center px-3 py-2 border-b-2 bg-white/80 backdrop-blur-3xl">
+              <div className="relative flex items-center justify-center px-3 py-2 border-b-2 bg-white/80 backdrop-blur-3xl">
                 <div className="absolute inset-y-0 left-0 flex items-center px-3 space-x-2">
                   <div
                     className="w-3 h-3 bg-red-400 rounded-full cursor-pointer"
