@@ -125,7 +125,7 @@ const Home: NextPage = () => {
       return panel.id == id
     })
 
-    if (panelExist) return
+    if (panelExist) return selectPanel(id)
 
     const newPanel: any = PANELS.find((panel) => {
       return panel.id == id
