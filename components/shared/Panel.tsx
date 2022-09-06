@@ -35,7 +35,7 @@ const Panel: React.FunctionComponent<{
       {!isMinimize && (
         <DraggableCore handle="span" onStart={onStartHandler}>
           <div
-            className={`absolute top-1/4 left-1/3 z-40 mx-auto flex -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-xl ${extraClass}`}
+            className={`absolute top-1/4 left-1/3 z-40 mx-auto flex -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-xl shadow-xl ${extraClass}`}
           >
             <span className="">
               <div className="flex items-center justify-center px-3 py-2 border-b-2 bg-white/80 backdrop-blur-3xl">
