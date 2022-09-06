@@ -1,9 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
+import AboutMe from '../components/panels/AboutMe'
+import Arts from '../components/panels/Arts'
+import ImagePanel from '../components/panels/ImagePanel'
+import Projects from '../components/panels/Projects'
 import Layout from '../components/shared/Layout'
 import Panel from '../components/shared/Panel'
 import ActivePanelContext from '../context/ActivePanelContext'
+import ProjectsData from '../data/projects.json'
 
 interface IPanelInterface {
   id: number
@@ -11,42 +16,89 @@ interface IPanelInterface {
   content: string
   icon: string
   minimize: boolean
+  extraClass: string
 }
 
 const Home: NextPage = () => {
+  const codeProjects: any = ProjectsData.filter((project) => {
+    return project.type == 'code'
+  })
+
+  const templateProjects: any = ProjectsData.filter((project) => {
+    return project.type == 'template'
+  })
+
   const PANELS = [
     {
       id: 1,
-      name: 'Project',
-      content: 'hello',
+      name: 'Codes',
+      content: <Projects projects={codeProjects} />,
       icon: '/images/icons/folder.png',
       minimize: false,
+      extraClass: 'w-1/3',
     },
     {
-      id: 2,
-      name: 'Project2',
-      content: 'hello',
+      id: 3,
+      name: 'Templates',
+      content: <Projects projects={templateProjects} />,
       icon: '/images/icons/folder.png',
       minimize: false,
+      extraClass: 'w-1/3',
+    },
+    {
+      id: 4,
+      name: 'Arts',
+      content: <Arts />,
+      icon: '/images/icons/folder.png',
+      minimize: false,
+      extraClass: 'w-1/3',
+    },
+    {
+      id: 5,
+      name: 'About Me',
+      content: <AboutMe />,
+      icon: '/images/icons/doc.png',
+      minimize: false,
+      extraClass: 'w-96',
+    },
+    {
+      id: 6,
+      name: 'Preview',
+      content: <ImagePanel image="" />,
+      icon: '/images/icons/preview.png',
+      minimize: false,
+      extraClass: 'w-3/5 h-4/5',
     },
   ]
 
   const DESKTOP = [
     {
-      name: 'Project',
+      name: 'Codes',
       icon: '/images/icons/folder.png',
       panel_id: 1,
     },
     {
-      name: 'Project2',
+      name: 'Templates',
       icon: '/images/icons/folder.png',
-      panel_id: 2,
+      panel_id: 3,
+    },
+    {
+      name: 'Arts',
+      icon: '/images/icons/folder.png',
+      panel_id: 4,
+    },
+    {
+      name: 'About Me',
+      icon: '/images/icons/doc.png',
+      panel_id: 5,
     },
   ]
 
-  const { activePanel, updatePanel } = useContext(ActivePanelContext)
+  useEffect(() => {
+    openPanel(5)
+  }, [])
 
-  // const [activePanel, setActivepanel] = useState<IPanelInterface[]>([])
+  const { activePanel, updatePanel } = useContext(ActivePanelContext)
 
   const removePanel = (id: Number) => {
     updatePanel(
@@ -57,24 +109,25 @@ const Home: NextPage = () => {
   }
 
   const selectPanel = (id: number) => {
-    const panels = activePanel.filter((panel) => {
-      return panel.id != id
-    })
-    const newPanel = PANELS.find((panel) => {
+    const selectedPanel: any = activePanel.find((panel) => {
       return panel.id == id
     })
 
-    updatePanel([...panels, newPanel!])
+    const panels: any = activePanel.filter((panel) => {
+      return panel.id != id
+    })
+
+    updatePanel([...panels, selectedPanel!])
   }
 
   const openPanel = (id: number) => {
-    const panelExist = activePanel.some((panel) => {
+    const panelExist: any = activePanel.some((panel) => {
       return panel.id == id
     })
 
     if (panelExist) return
 
-    const newPanel = PANELS.find((panel) => {
+    const newPanel: any = PANELS.find((panel) => {
       return panel.id == id
     })
 
@@ -95,32 +148,33 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Next JS Boilerplate</title>
+        <title>MacOS</title>
       </Head>
       <main
         style={{ backgroundImage: `url("/images/wallpaper/1.jpg")` }}
-        className="relative min-h-screen p-4 pt-10 bg-cover"
+        className="relative min-h-screen overflow-hidden bg-cover"
       >
-        <div className="flex flex-col flex-wrap items-start space-y-4">
-          {DESKTOP.map((app) => {
-            return (
-              <div
-                key={app.panel_id}
-                className="flex flex-col items-center justify-center px-3 py-1 rounded cursor-pointer hover:bg-blue-300"
-                onClick={(e) => {
-                  if (e.detail == 2) {
-                    openPanel(app.panel_id)
-                  }
-                }}
-              >
-                <img src={app.icon} alt="Folder icon" className="w-16 pb-1" />
-                <span className="text-white">{app.name}</span>
-              </div>
-            )
-          })}
-        </div>
-        <div>
-          {activePanel.map((panel) => {
+        <div className="absolute inset-0 pt-10" id="panel">
+          <div className="flex flex-col flex-wrap items-start space-y-4">
+            {DESKTOP.map((app) => {
+              return (
+                <div
+                  key={app.panel_id}
+                  className="flex flex-col items-center justify-center px-3 py-1 rounded cursor-pointer hover:bg-blue-300"
+                  onClick={(e) => {
+                    if (e.detail == 2) {
+                      openPanel(app.panel_id)
+                    }
+                  }}
+                >
+                  <img src={app.icon} alt="Folder icon" className="w-16 pb-1" />
+                  <span className="text-white">{app.name}</span>
+                </div>
+              )
+            })}
+          </div>
+
+          {activePanel.map((panel, index) => {
             return (
               <Panel
                 key={panel.id}
@@ -130,6 +184,7 @@ const Home: NextPage = () => {
                 selectPanel={selectPanel}
                 isMinimize={panel.minimize}
                 minimizePanel={minimizePanel}
+                extraClass={panel.extraClass}
               >
                 {panel.content}
               </Panel>

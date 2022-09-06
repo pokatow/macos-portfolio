@@ -6,6 +6,7 @@ interface IPanelInterface {
   content: string
   icon: string
   minimize: boolean
+  extraClass: string
 }
 
 interface IActivePaneleContext {

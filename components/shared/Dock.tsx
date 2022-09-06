@@ -1,59 +1,37 @@
 import React, { useContext } from 'react'
 import ActivePanelContext from '../../context/ActivePanelContext'
 
-interface PanelInterface {
-  id: number
-  name: string
-  content: string
-}
-
 const icons = [
   {
-    name: 'vscode',
+    name: 'Visual Studio Code',
     image: '/images/icons/vscode.png',
   },
   {
-    name: 'chrome',
-    image: '/images/icons/chrome.png',
+    name: 'Figma',
+    image: '/images/icons/figma.png',
   },
   {
-    name: 'safari',
-    image: '/images/icons/safari.png',
-  },
-  {
-    name: 'finder',
-    image: '/images/icons/finder.png',
-  },
-  {
-    name: 'mail',
-    image: '/images/icons/mail.png',
-  },
-  {
-    name: 'notes',
-    image: '/images/icons/notes.png',
-  },
-  {
-    name: 'notion',
+    name: 'Notion',
     image: '/images/icons/notion.png',
   },
   {
-    name: 'photos',
-    image: '/images/icons/photos.png',
-  },
-  {
-    name: 'spotify',
+    name: 'Spotify',
     image: '/images/icons/spotify.png',
   },
+  // {
+  //   name: 'Chrome',
+  //   image: '/images/icons/chrome.png',
+  // },
   {
-    name: 'setting',
-    image: '/images/icons/setting.png',
+    name: 'Safari',
+    image: '/images/icons/safari.png',
   },
   {
-    name: 'bin',
+    name: 'Bin',
     image: '/images/icons/bin.png',
   },
   {
-    name: 'launchpad',
+    name: 'Launchpad',
     image: '/images/icons/launchpad.png',
   },
 ]
@@ -73,34 +51,36 @@ const Dock: React.FunctionComponent<{}> = ({}) => {
   }
 
   return (
-    <div className="fixed bottom-0 flex flex-wrap justify-center pb-1 translate-x-1/2 shadow-lg right-1/2 rounded-xl bg-white/25 backdrop-blur-3xl">
-      {activePanel.length > 0 && (
-        <div className="flex items-center px-2 space-x-2">
-          {activePanel.map((panel) => {
-            return (
-              <img
-                onClick={() => unminimizePanel(panel.id)}
-                src={panel.icon}
-                alt={`${panel.name} icon`}
-                className="w-14"
-                key={panel.id}
-                title={panel.name}
-              />
-            )
-          })}
-          <div className="">|</div>
-        </div>
-      )}
-      {icons.map((icon) => {
-        return (
-          <img
-            src={icon.image}
-            alt={`${icon.name} icon`}
-            className="w-16"
-            key={icon.name}
-          />
-        )
-      })}
+    <div className="fixed inset-x-0 bottom-0 z-50 flex justify-center">
+      <div className="flex flex-wrap justify-center pb-1 shadow-lg rounded-xl bg-white/25 backdrop-blur-3xl">
+        {activePanel.length > 0 && (
+          <div className="flex items-center ">
+            {activePanel.map((panel) => {
+              return (
+                <img
+                  onClick={() => unminimizePanel(panel.id)}
+                  src={panel.icon}
+                  alt={`${panel.name} icon`}
+                  className="w-16 cursor-pointer"
+                  key={panel.id}
+                  title={panel.name}
+                />
+              )
+            })}
+          </div>
+        )}
+        {icons.map((icon) => {
+          return (
+            <img
+              src={icon.image}
+              alt={`${icon.name} icon`}
+              className="w-16"
+              key={icon.name}
+              title={icon.name}
+            />
+          )
+        })}
+      </div>
     </div>
   )
 }

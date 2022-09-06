@@ -88,26 +88,34 @@ const Layout: React.FunctionComponent = ({ children }) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
         />
-        <meta name="description" content="Boilerplate " />
+        <meta name="description" content="Pokatow Portfolio " />
         <meta name="robots" content="noodp" />
         <link rel="canonical" href="" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="boilerplate" />
-        <meta property="og:description" content="Boilerplate" />
+        <meta property="og:title" content="Pokatow Portfolio" />
+        <meta property="og:description" content="Pokatow Portfolio" />
         <meta property="og:url" content="" />
-        <meta property="og:site_name" content="boilerplate" />
+        <meta property="og:site_name" content="Pokatow Portfolio" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:description" content="boilerolate" />
-        <meta name="twitter:title" content="boilerplate" />
+        <meta name="twitter:description" content="Pokatow Portfolio" />
+        <meta name="twitter:title" content="Pokatow Portfolio" />
         <meta name="twitter:site" content="" />
         <meta name="twitter:creator" content="" />
       </Head>
-      <div className="flex flex-col justify-between min-h-screen select-none">
+      <div className="flex-col justify-between hidden min-h-screen select-none md:flex">
         <Navbar />
         {children}
         <Dock />
         {/* <Footer /> */}
+      </div>
+      <div
+        className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-cover md:hidden"
+        style={{ backgroundImage: `url("/images/wallpaper/1.jpg")` }}
+      >
+        <span className="px-3 py-2 text-lg font-semibold text-white shadow-lg rounded-xl bg-white/25 backdrop-blur-3xl">
+          Please Use Desktop
+        </span>
       </div>
     </>
   )

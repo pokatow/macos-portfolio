@@ -1,0 +1,172 @@
+[
+  {
+    "id": 11,
+    "name": "WYSIWYG-Blocks",
+    "client": "",
+    "description": "WYSIWYG-Blocks is a tool that allows users to write content and generate blocks of data in JSON.",
+    "website_url": "https://wysiwyg-blocks.vercel.app/",
+    "appstore_url": "",
+    "playstore_url": "",
+    "github_url": "",
+    "youtube_url": "",
+    "tags": ["NextJS", "TailwindCSS", "EditorJS"],
+    "images": [
+      "projects/tools/wysiwyg-blocks/1.png",
+      "projects/tools/wysiwyg-blocks/2.png"
+    ],
+    "type": "code"
+  },
+  {
+    "id": 10,
+    "name": "Black Minimalist Landing Page",
+    "client": "",
+    "description": "Black minimalist landing page for NFT Project.",
+    "website_url": "https://black-minimalist.vercel.app/",
+    "appstore_url": "",
+    "playstore_url": "",
+    "github_url": "",
+    "youtube_url": "",
+    "tags": ["NextJS", "TailwindCSS"],
+    "images": [
+      "projects/codes/black-minimalist-nft-project-landing-page/1.png",
+      "projects/codes/black-minimalist-nft-project-landing-page/2.png",
+      "projects/codes/black-minimalist-nft-project-landing-page/3.png",
+      "projects/codes/black-minimalist-nft-project-landing-page/4.png",
+      "projects/codes/black-minimalist-nft-project-landing-page/5.png",
+      "projects/codes/black-minimalist-nft-project-landing-page/6.png"
+    ],
+    "type": "code"
+  },
+  {
+    "id": 9,
+    "name": "Aswang Tribe Landing Page",
+    "client": "",
+    "description": "Aswang Tribe fan made landing page.",
+    "website_url": "https://aswang-tribe.vercel.app/",
+    "appstore_url": "",
+    "playstore_url": "",
+    "github_url": "",
+    "youtube_url": "",
+    "tags": ["NextJS", "TailwindCSS"],
+    "images": [
+      "projects/codes/aswang-tribe/1.png",
+      "projects/codes/aswang-tribe/2.png",
+      "projects/codes/aswang-tribe/3.png",
+      "projects/codes/aswang-tribe/4.png",
+      "projects/codes/aswang-tribe/5.png",
+      "projects/codes/aswang-tribe/6.png"
+    ],
+    "type": "code"
+  },
+  {
+    "id": 8,
+    "name": "NFT Dashboard",
+    "client": "",
+    "description": "a system that merge both profit and whitelist tracker with extra powerful dashboard.",
+    "website_url": "https://pokatow.notion.site/NFT-Dashboard-0159446a9441410ab974b3cd201773b2",
+    "appstore_url": "",
+    "playstore_url": "",
+    "github_url": "asdasd",
+    "youtube_url": "",
+    "tags": ["Notion", "Template"],
+    "images": ["projects/templates/nft-profit-tracker.png"],
+    "type": "template"
+  },
+  {
+    "id": 7,
+    "name": "0xpaper",
+    "client": "",
+    "description": "0xpaper is a custom template for consistent NFT project research report.",
+    "website_url": "https://0xpaper.vercel.app/",
+    "appstore_url": "",
+    "playstore_url": "",
+    "github_url": "",
+    "youtube_url": "",
+    "tags": ["NextJS", "TailwindCSS"],
+    "images": ["projects/tools/0xpaper/1.png"],
+    "type": "code"
+  },
+  {
+    "id": 6,
+    "name": "NFT Profit Tracker",
+    "client": "",
+    "description": "a system crafted with Notion that helps you track your flipping NFT profit.",
+    "website_url": "https://pokatow.notion.site/dbd641f37ebc4acd9104abe1c97538ec?v=d2c0513effca413daa974be33a8cc480",
+    "appstore_url": "",
+    "playstore_url": "",
+    "github_url": "",
+    "youtube_url": "",
+    "tags": ["Notion", "Template"],
+    "images": ["projects/templates/nft-profit-tracker.png"],
+    "type": "template"
+  },
+  {
+    "id": 5,
+    "name": "NFT Whitelist Tracker",
+    "client": "",
+    "description": " a system crafted with Notion that helps you track your NFT project whitelist.",
+    "website_url": "https://pokatow.notion.site/e018849e6a16457aa5284fbd2fc2fd00?v=6fc166d570a746e0b1950046e8dc527f",
+    "appstore_url": "",
+    "playstore_url": "",
+    "github_url": "",
+    "youtube_url": "",
+    "tags": ["Notion", "Template"],
+    "images": ["projects/templates/nft-whitelist-tracker.png"],
+    "type": "template"
+  },
+  {
+    "id": 3,
+    "name": "Doodles Website Revamp",
+    "client": "",
+    "description": "Redesign and rebuild old Doodles website.",
+    "website_url": "https://doodles-revamp.vercel.app/",
+    "appstore_url": "",
+    "playstore_url": "",
+    "github_url": "",
+    "youtube_url": "",
+    "tags": ["NextJS", "TailwindCSS"],
+    "images": [
+      "projects/codes/doodles-revamp/1.png",
+      "projects/codes/doodles-revamp/2.png",
+      "projects/codes/doodles-revamp/3.png",
+      "projects/codes/doodles-revamp/4.png"
+    ],
+    "type": "code"
+  },
+  {
+    "id": 2,
+    "name": "Fidles",
+    "client": "",
+    "description": "a NFT project by Pokatow to learn how to create NFT art with Figma, write and deploy smart contract, and build minting site.",
+    "website_url": "https://fidles.vercel.app/",
+    "appstore_url": "",
+    "playstore_url": "",
+    "github_url": "",
+    "youtube_url": "",
+    "tags": ["NextJS", "TailwindCSS", "Solidity", "Figma"],
+    "images": [
+      "projects/codes/fidles/1.png",
+      "projects/codes/fidles/2.png",
+      "projects/codes/fidles/3.png"
+    ],
+    "type": "code"
+  },
+  {
+    "id": 1,
+    "name": "mémoire",
+    "client": "",
+    "description": "A storytelling website equipped with a music player to boost the user reading experience.",
+    "website_url": "",
+    "appstore_url": "",
+    "playstore_url": "",
+    "github_url": "",
+    "youtube_url": "",
+    "tags": ["NextJS", "TailwindCSS"],
+    "images": [
+      "projects/codes/memoire/1.png",
+      "projects/codes/memoire/2.png",
+      "projects/codes/memoire/3.png"
+    ],
+    "type": "code"
+  }
+]
