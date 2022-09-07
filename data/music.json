@@ -1,5 +1,10 @@
 [
   {
+    "artist": "Lofi",
+    "title": "Sunset",
+    "source": "/music/lofi-dawn.mp3"
+  },
+  {
     "artist": "Stardew Valley",
     "title": "Overture",
     "source": "/music/stardew-overture.mp3"
@@ -13,11 +18,6 @@
     "artist": "Stardew Valley",
     "title": "Settling In",
     "source": "/music/stardew-settling-in.mp3"
-  },
-  {
-    "artist": "Lofi",
-    "title": "Sunset",
-    "source": "/music/lofi-dawn.mp3"
   },
   {
     "artist": "Lofi",

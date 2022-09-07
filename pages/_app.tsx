@@ -1,14 +1,14 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Layout from '../components/shared/Layout'
-import { ActivePanelProvider } from '../context/ActivePanelContext'
+import { PanelProvider } from '../context/PanelContext'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ActivePanelProvider>
+    <PanelProvider>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </ActivePanelProvider>
+    </PanelProvider>
   )
 }
 

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { FaGithub, FaLink } from 'react-icons/fa'
-import ActivePanelContext from '../../context/ActivePanelContext'
+import PanelContext from '../../context/PanelContext'
 import ImagePanel from './ImagePanel'
 interface IProject {
   id: string
@@ -18,32 +18,7 @@ interface IProject {
 }
 
 const Project: React.FunctionComponent<{ data: IProject }> = ({ data }) => {
-  const { activePanel, updatePanel } = useContext(ActivePanelContext)
-  // const imageModal = useRef<ImageModalFunction>()
-
-  const openImage = (image: string, name: string) => {
-    const panelExist: any = activePanel.some((panel) => {
-      return panel.id == 6
-    })
-
-    const newPanel: any = {
-      id: 6,
-      name: name,
-      content: <ImagePanel image={image} />,
-      icon: '/images/icons/preview.png',
-      minimize: false,
-      extraClass: 'w-3/5 h-4/5',
-    }
-
-    if (panelExist) {
-      const panels: any = activePanel.filter((panel) => {
-        return panel.id != 6
-      })
-      updatePanel([...panels, newPanel!])
-    } else {
-      updatePanel([...activePanel, newPanel!])
-    }
-  }
+  const { activePanel, open } = useContext(PanelContext)
 
   return (
     <div className="flex flex-col p-4 overflow-y-auto text-neutral-800">
@@ -83,7 +58,7 @@ const Project: React.FunctionComponent<{ data: IProject }> = ({ data }) => {
             return (
               <img
                 onClick={(e) => {
-                  openImage(image, data.name)
+                  open(6, 'image', { image: image, name: data.name })
                 }}
                 key={index}
                 className="mb-4 border cursor-pointer break-inside border-neutral-900 dark:border-neutral-100 md:mb-6"

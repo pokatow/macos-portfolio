@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react'
-import ActivePanelContext from '../../context/ActivePanelContext'
+import PanelContext from '../../context/PanelContext'
 import data from '../../data/arts.json'
 import ImagePanel from './ImagePanel'
 
@@ -8,31 +8,7 @@ interface ImageModalFunction {
 }
 
 const Arts = () => {
-  const { activePanel, updatePanel } = useContext(ActivePanelContext)
-  // const imageModal = useRef<ImageModalFunction>()
-
-  const openImage = (image: string, name: string) => {
-    const panelExist: any = activePanel.some((panel) => {
-      return panel.id == 6
-    })
-    const newPanel: any = {
-      id: 6,
-      name: name,
-      content: <ImagePanel image={image} />,
-      icon: '/images/icons/preview.png',
-      minimize: false,
-      extraClass: 'w-3/5 h-4/5',
-    }
-
-    if (panelExist) {
-      const panels: any = activePanel.filter((panel) => {
-        return panel.id != 6
-      })
-      updatePanel([...panels, newPanel!])
-    } else {
-      updatePanel([...activePanel, newPanel!])
-    }
-  }
+  const { open } = useContext(PanelContext)
 
   return (
     <div className="flex flex-wrap gap-4 p-2 overflow-y-auto ">
@@ -43,7 +19,7 @@ const Arts = () => {
             key={art.id}
             onClick={(e) => {
               if (e.detail == 2) {
-                openImage(art.link, art.name)
+                open(6, 'image', { image: art.link, name: art.name })
               }
             }}
           >

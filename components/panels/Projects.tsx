@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
-import ActivePanelContext from '../../context/ActivePanelContext'
-import Project from './Project'
+import PanelContext from '../../context/PanelContext'
 
 interface IProject {
   id: string
@@ -20,20 +19,7 @@ interface IProject {
 const Projects: React.FunctionComponent<{ projects: IProject[] }> = ({
   projects,
 }) => {
-  const { activePanel, updatePanel } = useContext(ActivePanelContext)
-  const openProject = (id: string) => {
-    const selectedProject = projects.find((project) => project.id == id)
-    const newPanel: any = {
-      id: Date.now(),
-      name: selectedProject?.name,
-      content: <Project data={selectedProject!} />,
-      icon: '/images/icons/doc.png',
-      minimize: false,
-      extraClass: 'w-2/5',
-    }
-
-    updatePanel([...activePanel, newPanel!])
-  }
+  const { open } = useContext(PanelContext)
   return (
     <div className="flex flex-wrap gap-4 p-2 pb-6 overflow-y-auto">
       {projects.map((project, index) => {
@@ -43,7 +29,7 @@ const Projects: React.FunctionComponent<{ projects: IProject[] }> = ({
             key={project.id}
             onClick={(e) => {
               if (e.detail == 2) {
-                openProject(project.id)
+                open(Date.now(), 'project', { project })
               }
             }}
           >

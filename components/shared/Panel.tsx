@@ -4,7 +4,7 @@ import { useRef, useState } from 'react'
 
 const Panel: React.FunctionComponent<{
   title: string
-  removePanel: Function
+  closePanel: Function
   selectPanel: Function
   minimizePanel: Function
   id: number
@@ -13,7 +13,7 @@ const Panel: React.FunctionComponent<{
 }> = ({
   children,
   title,
-  removePanel,
+  closePanel,
   selectPanel,
   id,
   isMinimize,
@@ -21,13 +21,13 @@ const Panel: React.FunctionComponent<{
   extraClass,
 }) => {
   const close = () => {
-    return removePanel(id)
+    closePanel(id)
   }
   const minimize = () => {
     minimizePanel(id)
   }
   const onStartHandler = () => {
-    return selectPanel(id)
+    selectPanel(id)
   }
 
   return (

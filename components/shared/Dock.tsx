@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import ActivePanelContext from '../../context/ActivePanelContext'
+import PanelContext from '../../context/PanelContext'
 
 const icons = [
   {
@@ -37,28 +37,17 @@ const icons = [
 ]
 
 const Dock: React.FunctionComponent<{}> = ({}) => {
-  const { activePanel, updatePanel } = useContext(ActivePanelContext)
-
-  const unminimizePanel = (id: number) => {
-    let panels = [...activePanel]
-    let targetPanel = panels.find((panel) => panel.id == id)
-
-    if (!targetPanel) return
-
-    targetPanel.minimize = !targetPanel.minimize
-
-    updatePanel(panels)
-  }
+  const { dock, minimize } = useContext(PanelContext)
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 flex justify-center">
       <div className="flex flex-wrap justify-center pb-1 shadow-lg rounded-xl bg-white/25 backdrop-blur-3xl">
-        {activePanel.length > 0 && (
+        {dock.length > 0 && (
           <div className="flex items-center ">
-            {activePanel.map((panel) => {
+            {dock.map((panel) => {
               return (
                 <img
-                  onClick={() => unminimizePanel(panel.id)}
+                  onClick={() => minimize(panel.id)}
                   src={panel.icon}
                   alt={`${panel.name} icon`}
                   className="w-16 cursor-pointer"
