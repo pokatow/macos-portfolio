@@ -1,9 +1,20 @@
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 import Dock from './Dock'
 import Footer from './Footer'
 import Navbar from './Navbar'
+import { FaApple } from 'react-icons/fa'
 
 const Layout: React.FunctionComponent = ({ children }) => {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [progress, setProgress] = useState(0)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true)
+    }, 3000)
+  }, [])
+
   return (
     <>
       <Head>
@@ -103,20 +114,35 @@ const Layout: React.FunctionComponent = ({ children }) => {
         <meta name="twitter:site" content="" />
         <meta name="twitter:creator" content="" />
       </Head>
-      <div className="flex-col justify-between hidden min-h-screen select-none md:flex">
-        <Navbar />
-        {children}
-        <Dock />
-        {/* <Footer /> */}
-      </div>
-      <div
-        className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-cover md:hidden"
-        style={{ backgroundImage: `url("/images/wallpaper/1.jpg")` }}
-      >
-        <span className="px-3 py-2 text-lg font-semibold text-white shadow-lg rounded-xl bg-white/25 backdrop-blur-3xl">
-          Please use desktop 🙏
-        </span>
-      </div>
+      {!isLoaded ? (
+        <div className="flex-col items-center justify-center hidden min-h-screen space-y-12 bg-black select-none md:flex">
+          <FaApple className="text-white text-8xl" />
+          <div className="mb-4 flex h-1.5 w-1/3 items-center rounded-full bg-neutral-700 ">
+            <div
+              className="h-1 bg-white rounded-full "
+              style={{ width: '100%' }}
+            ></div>
+          </div>
+        </div>
+      ) : (
+        <>
+          {' '}
+          <div className="flex-col justify-between hidden min-h-screen select-none md:flex">
+            <Navbar />
+            {children}
+            <Dock />
+            {/* <Footer /> */}
+          </div>
+          <div
+            className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-cover md:hidden"
+            style={{ backgroundImage: `url("/images/wallpaper/1.jpg")` }}
+          >
+            <span className="px-3 py-2 text-lg font-semibold text-white shadow-lg rounded-xl bg-white/25 backdrop-blur-3xl">
+              Please use desktop 🙏
+            </span>
+          </div>
+        </>
+      )}
     </>
   )
 }
