@@ -1,23 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState, useContext, useEffect } from 'react'
-import AboutMe from '../components/panels/AboutMe'
-import Arts from '../components/panels/Arts'
-import ImagePanel from '../components/panels/ImagePanel'
-import Projects from '../components/panels/Projects'
-import Layout from '../components/shared/Layout'
+import { useContext, useEffect } from 'react'
 import Panel from '../components/shared/Panel'
 import PanelContext from '../context/PanelContext'
-import ProjectsData from '../data/projects.json'
-
-interface IPanelInterface {
-  id: number
-  name: string
-  content: string
-  icon: string
-  minimize: boolean
-  extraClass: string
-}
 
 const Home: NextPage = () => {
   const DESKTOP = [

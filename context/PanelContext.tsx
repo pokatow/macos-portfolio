@@ -89,11 +89,14 @@ export const PanelProvider: React.FunctionComponent = ({ children }) => {
   ]
 
   const open = (id: number, type?: string, data?: any) => {
-    const panelExist: any = activePanel.some((panel) => {
+    const panelExist: any = activePanel.find((panel) => {
       return panel.id == id
     })
 
     if (panelExist && type != 'image') {
+      if (panelExist.minimize) {
+        minimize(id)
+      }
       return select(id)
     } else {
       select(id)
