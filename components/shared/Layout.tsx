@@ -5,16 +5,21 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 import { FaApple } from 'react-icons/fa'
 
+let timer: any
 const Layout: React.FunctionComponent = ({ children }) => {
-  const [isLoaded, setIsLoaded] = useState(false)
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoaded(true)
-    }, 3000)
-  }, [])
+    timer = setInterval(() => {
+      if (progress === 100) {
+        clearInterval(timer)
+        return
+      }
+      setProgress((prev) => prev + 1)
+    }, 20)
 
+    return () => clearInterval(timer)
+  }, [progress])
   return (
     <>
       <Head>
@@ -114,17 +119,7 @@ const Layout: React.FunctionComponent = ({ children }) => {
         <meta name="twitter:site" content="" />
         <meta name="twitter:creator" content="" />
       </Head>
-      {!isLoaded ? (
-        <div className="flex-col items-center justify-center hidden min-h-screen space-y-12 bg-black select-none md:flex">
-          <FaApple className="text-white text-8xl" />
-          <div className="mb-4 flex h-1.5 w-1/3 items-center rounded-full bg-neutral-700 ">
-            <div
-              className="h-1 bg-white rounded-full "
-              style={{ width: '100%' }}
-            ></div>
-          </div>
-        </div>
-      ) : (
+      {progress === 100 ? (
         <>
           {' '}
           <div className="flex-col justify-between hidden min-h-screen select-none md:flex">
@@ -142,6 +137,19 @@ const Layout: React.FunctionComponent = ({ children }) => {
             </span>
           </div>
         </>
+      ) : (
+        <div className="flex-col items-center justify-center hidden min-h-screen space-y-12 bg-black select-none md:flex">
+          <FaApple className="text-white text-8xl" />
+          <div className="mb-4 flex h-1.5 w-1/3 items-center rounded-full bg-neutral-700 ">
+            <div
+              className="h-1 bg-white rounded-full"
+              style={{
+                width: progress + '%',
+                transition: 'width 0s',
+              }}
+            ></div>
+          </div>
+        </div>
       )}
     </>
   )
