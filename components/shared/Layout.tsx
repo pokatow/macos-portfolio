@@ -119,38 +119,39 @@ const Layout: React.FunctionComponent = ({ children }) => {
         <meta name="twitter:site" content="" />
         <meta name="twitter:creator" content="" />
       </Head>
-      {progress === 100 ? (
-        <>
-          {' '}
-          <div className="flex-col justify-between hidden min-h-screen select-none md:flex">
-            <Navbar />
-            {children}
-            <Dock />
-            {/* <Footer /> */}
-          </div>
-          <div
-            className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-cover md:hidden"
-            style={{ backgroundImage: `url("/images/wallpaper/1.jpg")` }}
-          >
-            <span className="px-3 py-2 text-lg font-semibold text-white shadow-lg rounded-xl bg-white/25 backdrop-blur-3xl">
-              Please use desktop 🙏
-            </span>
-          </div>
-        </>
-      ) : (
-        <div className="flex-col items-center justify-center hidden min-h-screen space-y-12 bg-black select-none md:flex">
-          <FaApple className="text-white text-8xl" />
-          <div className="mb-4 flex h-1.5 w-1/3 items-center rounded-full bg-neutral-700 ">
-            <div
-              className="h-1 bg-white rounded-full"
-              style={{
-                width: progress + '%',
-                transition: 'width 0s',
-              }}
-            ></div>
-          </div>
+
+      <div className={progress == 100 ? 'block' : 'hidden'}>
+        <div className="flex-col justify-between hidden min-h-screen select-none md:flex">
+          <Navbar />
+          {children}
+          <Dock />
         </div>
-      )}
+        <div
+          className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-cover md:hidden"
+          style={{ backgroundImage: `url("/images/wallpaper/1.jpg")` }}
+        >
+          <span className="px-3 py-2 text-lg font-semibold text-white shadow-lg rounded-xl bg-white/25 backdrop-blur-3xl">
+            Please use desktop 🙏
+          </span>
+        </div>
+      </div>
+
+      <div
+        className={` min-h-screen select-none flex-col items-center justify-center space-y-12 bg-black  ${
+          progress == 100 ? 'hidden' : 'flex'
+        }`}
+      >
+        <FaApple className="text-white text-8xl" />
+        <div className="mb-4 flex h-1.5 w-1/3 items-center rounded-full bg-neutral-700 ">
+          <div
+            className="h-1 bg-white rounded-full"
+            style={{
+              width: progress + '%',
+              transition: 'width 0s',
+            }}
+          ></div>
+        </div>
+      </div>
     </>
   )
 }
