@@ -123,6 +123,7 @@ const Layout: React.FunctionComponent = ({ children }) => {
       <div className={progress == 100 ? 'block' : 'hidden'}>
         <div className="flex-col justify-between hidden min-h-screen select-none md:flex">
           <Navbar />
+
           {children}
           <Dock />
         </div>
@@ -142,6 +143,7 @@ const Layout: React.FunctionComponent = ({ children }) => {
         }`}
       >
         <FaApple className="text-white text-8xl" />
+
         <div className="mb-4 flex h-1.5 w-1/3 items-center rounded-full bg-neutral-700 ">
           <div
             className="h-1 bg-white rounded-full"

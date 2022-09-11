@@ -1,5 +1,22 @@
 [
   {
+    "id": 12,
+    "name": "Garbage Friends Toolbox",
+    "client": "",
+    "description": "Garbage Friends Toolbox is an online toolbox by Pokatow and Erenyeager_eth. The toolbox itself consists of an alphabet generator and a PFP generator. All alphabets in this toolbox are hand-drawn by Erenyeager_eth, and Pokatow is in charge of the technical part of the website.",
+    "website_url": "https://www.garbagefriendstoolbox.xyz/",
+    "appstore_url": "",
+    "playstore_url": "",
+    "github_url": "",
+    "youtube_url": "",
+    "tags": ["NextJS", "TailwindCSS"],
+    "images": [
+      "projects/codes/garbage-friends-generator/1.png",
+      "projects/codes/garbage-friends-generator/2.png"
+    ],
+    "type": "code"
+  },
+  {
     "id": 11,
     "name": "WYSIWYG-Blocks",
     "client": "",
@@ -66,7 +83,7 @@
     "website_url": "https://pokatow.notion.site/NFT-Dashboard-0159446a9441410ab974b3cd201773b2",
     "appstore_url": "",
     "playstore_url": "",
-    "github_url": "asdasd",
+    "github_url": "",
     "youtube_url": "",
     "tags": ["Notion", "Template"],
     "images": ["projects/templates/nft-profit-tracker.png"],

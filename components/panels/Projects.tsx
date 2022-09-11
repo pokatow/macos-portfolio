@@ -21,32 +21,34 @@ const Projects: React.FunctionComponent<{ projects: IProject[] }> = ({
 }) => {
   const { open } = useContext(PanelContext)
   return (
-    <div className="flex flex-wrap gap-4 p-2 pb-6 overflow-y-auto">
-      {projects.map((project, index) => {
-        return (
-          <div
-            className="flex flex-col w-24 p-1 space-y-1 rounded cursor-pointer hover:bg-blue-200"
-            key={project.id}
-            onClick={(e) => {
-              if (e.detail == 2) {
-                open(Date.now(), 'project', { project })
-              }
-            }}
-          >
-            <div className="relative h-0 w-[100%] overflow-hidden  pb-[100%]">
-              <img
-                className="absolute inset-0 object-cover w-full h-full"
-                src="/images/icons/doc.png"
-                alt={project.name}
-              />
+    <>
+      <div className="flex flex-wrap gap-4 p-2 pb-6 overflow-y-auto">
+        {projects.map((project, index) => {
+          return (
+            <div
+              className="flex flex-col w-24 p-1 space-y-1 rounded cursor-pointer hover:bg-blue-200"
+              key={project.id}
+              onClick={(e) => {
+                if (e.detail == 2) {
+                  open(Date.now(), 'project', { project })
+                }
+              }}
+            >
+              <div className="relative h-0 w-[100%] overflow-hidden  pb-[100%]">
+                <img
+                  className="absolute inset-0 object-cover w-full h-full"
+                  src="/images/icons/doc.png"
+                  alt={project.name}
+                />
+              </div>
+              <span className="text-xs text-center break-all">
+                {project.name}
+              </span>
             </div>
-            <span className="text-xs text-center break-all">
-              {project.name}
-            </span>
-          </div>
-        )
-      })}
-    </div>
+          )
+        })}
+      </div>
+    </>
   )
 }
 
