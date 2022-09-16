@@ -6,11 +6,12 @@ import {
   BsBatteryFull,
   BsSearch,
   BsMusicNoteList,
+  BsTwitter,
 } from 'react-icons/bs'
 
 import AudioPlayer from '../shared/AudioPlayer'
 const Navbar = () => {
-  const [musicPlayer, setMusicPlayer] = useState(false)
+  const [musicPlayer, setMusicPlayer] = useState(true)
   return (
     <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-4 py-1 text-sm text-white bg-white/10 backdrop-blur-3xl">
       <div className="flex items-center space-x-6">
@@ -24,6 +25,13 @@ const Navbar = () => {
         <span>Help</span>
       </div>
       <div className="flex items-center space-x-6">
+        <a
+          href="https://twitter.com/Pokatow"
+          target={'_blank'}
+          title="Pokatow's Twitter"
+        >
+          <BsTwitter className="text-sm text-white " />
+        </a>
         <BsMusicNoteList
           className="text-white cursor-pointer"
           onClick={() => setMusicPlayer(!musicPlayer)}
