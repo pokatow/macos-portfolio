@@ -118,6 +118,7 @@ const Layout: React.FunctionComponent = ({ children }) => {
         <meta name="twitter:title" content="Pokatow Portfolio" />
         <meta name="twitter:site" content="" />
         <meta name="twitter:creator" content="" />
+        <link rel="preload" as="image" href="images/wallpaper/1.jpg"></link>
       </Head>
 
       <div className={progress == 100 ? 'block' : 'hidden'}>
