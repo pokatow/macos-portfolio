@@ -46,7 +46,7 @@ const Home: NextPage = () => {
         <title>Pokatow</title>
       </Head>
       <main
-        style={{ backgroundImage: `url("/images/wallpaper/4.jpg")` }}
+        style={{ backgroundImage: `url("/images/wallpaper/1.jpg")` }}
         className="relative min-h-screen overflow-hidden bg-cover"
       >
         <div className="absolute inset-0 pt-10" id="panel">
