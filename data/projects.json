@@ -151,24 +151,6 @@
     "type": "code"
   },
   {
-    "id": 2,
-    "name": "Fidles",
-    "client": "",
-    "description": "a NFT project by Pokatow to learn how to create NFT art with Figma, write and deploy smart contract, and build minting site.",
-    "website_url": "https://fidles.vercel.app/",
-    "appstore_url": "",
-    "playstore_url": "",
-    "github_url": "",
-    "youtube_url": "",
-    "tags": ["NextJS", "TailwindCSS", "Solidity", "Figma"],
-    "images": [
-      "projects/codes/fidles/1.png",
-      "projects/codes/fidles/2.png",
-      "projects/codes/fidles/3.png"
-    ],
-    "type": "code"
-  },
-  {
     "id": 1,
     "name": "mémoire",
     "client": "",
