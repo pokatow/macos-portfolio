@@ -9,7 +9,8 @@ const AboutMe = () => {
         1) young software engineer who's trying to get his feet wet in web3
         space 💻 2) someone who loves art and design 🎨 3) someone who's finding
         opportunity as a web developer in web3 space 🌎 4) someone with strong
-        desire to travel ✈️ 5) potato addict 🥔
+        desire to travel ✈️ 5) potato addict 🥔 6) designer x frontend developer
+        @cypherlabz
       </p>
     </div>
   )
