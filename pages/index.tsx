@@ -43,7 +43,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Pokatow</title>
+        <title>MacOS Portfolio</title>
       </Head>
       <main
         style={{ backgroundImage: `url("/images/wallpaper/1.jpg")` }}

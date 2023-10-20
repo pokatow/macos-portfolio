@@ -7,6 +7,7 @@ import {
   BsSearch,
   BsMusicNoteList,
   BsTwitter,
+  BsGithub,
 } from 'react-icons/bs'
 
 import AudioPlayer from '../shared/AudioPlayer'
@@ -16,7 +17,7 @@ const Navbar = () => {
     <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-4 py-1 text-sm text-white bg-white/10 backdrop-blur-3xl">
       <div className="flex items-center space-x-6">
         <BsApple className="text-white " />
-        <span className="font-semibold">Pokatow</span>
+        <span className="font-semibold">Portfolio</span>
         <span>File</span>
         <span>Edit</span>
         <span>View</span>
@@ -25,6 +26,13 @@ const Navbar = () => {
         <span>Help</span>
       </div>
       <div className="flex items-center space-x-6">
+        <a
+          href="https://github.com/Pokatow"
+          target={'_blank'}
+          title="Pokatow's Github"
+        >
+          <BsGithub className="text-sm text-white " />
+        </a>
         <a
           href="https://twitter.com/Pokatow"
           target={'_blank'}

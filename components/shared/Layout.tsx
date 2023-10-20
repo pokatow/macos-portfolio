@@ -23,57 +23,10 @@ const Layout: React.FunctionComponent = ({ children }) => {
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="57x57"
-          href="/favicon/apple-icon-57x57.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="60x60"
-          href="/favicon/apple-icon-60x60.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="72x72"
-          href="/favicon/apple-icon-72x72.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="76x76"
-          href="/favicon/apple-icon-76x76.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="114x114"
-          href="/favicon/apple-icon-114x114.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="120x120"
-          href="/favicon/apple-icon-120x120.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="144x144"
-          href="/favicon/apple-icon-144x144.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="152x152"
-          href="/favicon/apple-icon-152x152.png"
-        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/favicon/apple-icon-180x180.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="192x192"
-          href="/favicon/android-icon-192x192.png"
+          href="/favicon/apple-touch-icon.png"
         />
         <link
           rel="icon"
@@ -84,15 +37,17 @@ const Layout: React.FunctionComponent = ({ children }) => {
         <link
           rel="icon"
           type="image/png"
-          sizes="96x96"
-          href="/favicon/favicon-96x96.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
           sizes="16x16"
           href="/favicon/favicon-16x16.png"
         />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link
+          rel="mask-icon"
+          href="/favicon/safari-pinned-tab.svg"
+          color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff"></meta>
         {/* <link rel="manifest" href="/manifest.json" /> */}
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta
@@ -104,18 +59,18 @@ const Layout: React.FunctionComponent = ({ children }) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
         />
-        <meta name="description" content="Pokatow Portfolio " />
+        <meta name="description" content="MacOS Portfolio " />
         <meta name="robots" content="noodp" />
         <link rel="canonical" href="" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Pokatow Portfolio" />
-        <meta property="og:description" content="Pokatow Portfolio" />
+        <meta property="og:title" content="MacOS Portfolio" />
+        <meta property="og:description" content="MacOS Portfolio" />
         <meta property="og:url" content="" />
-        <meta property="og:site_name" content="Pokatow Portfolio" />
+        <meta property="og:site_name" content="MacOS Portfolio" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:description" content="Pokatow Portfolio" />
-        <meta name="twitter:title" content="Pokatow Portfolio" />
+        <meta name="twitter:description" content="MacOS Portfolio" />
+        <meta name="twitter:title" content="MacOS Portfolio" />
         <meta name="twitter:site" content="" />
         <meta name="twitter:creator" content="" />
         <link rel="preload" as="image" href="images/wallpaper/1.jpg"></link>
